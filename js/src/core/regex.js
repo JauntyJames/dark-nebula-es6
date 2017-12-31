@@ -17,13 +17,23 @@ endsWithVowel = (string) => {
 };
 
 captureThreeNumbers = (string) => {
-
+  let regex = /\d{3}/
+  let found = string.match(regex);
+  if (found !== null){
+    return found[0];
+  } else {
+    return false;
+  }
 };
 
 matchesPattern = (string) => {
-
+  let regex = /^\d{3}-\d{3}-\d{4}$/
+  let found = regex.test(string);
+  return found;
 };
 
 isUSD = (string) => {
-
+  let regex = /^\$(((\d{1,3},)?(\d{3},)*\d{3})|(\d{0,3}))(\.\d{2})?$/
+  let found = regex.test(string);
+  return found
 };

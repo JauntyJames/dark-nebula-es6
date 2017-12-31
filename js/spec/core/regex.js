@@ -1,4 +1,4 @@
-xdescribe('regular expressions', () => {
+describe('regular expressions', () => {
   it('you should be able to detect a number in a string', () => {
     expect(containsNumber('abc123')).toEqual(true);
     expect(containsNumber('abc')).toEqual(false);
